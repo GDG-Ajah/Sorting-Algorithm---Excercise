@@ -22,3 +22,15 @@
 
 # 1 <= k <= nums.length <= 105
 # -104 <= nums[i] <= 104
+
+class Solution(object):
+    def findKthLargest(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        
+        
+
+
