@@ -23,3 +23,25 @@
  
 
 # Follow up: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
+
+
+
+class Solution(object):
+    def topKFrequent(self, nums, k):
+        d = {}
+        for i in nums:
+            if i not in d:
+                d[i] = 1
+            else:
+                d[i] = d[i]+1
+        res = []
+        for i in range(k):
+            max = 0
+            for j in d:
+                if d[j] > max:
+                    max = d[j]
+                    max_key = j
+            res.append(max_key)
+            del d[max_key]
+        return res
+        

@@ -23,3 +23,22 @@
  
 
 // Follow up: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
+
+class Solution {
+  List<int> topKFrequent(List<int> nums, int k) {
+    Map<int, int> map = {};
+    for (int i = 0; i < nums.length; i++) {
+      if (map.containsKey(nums[i])) {
+        map[nums[i]] = map[nums[i]]! + 1;
+      } else {
+        map[nums[i]] = 1;
+      }
+    }
+    List<int> list = [];
+    map.forEach((key, value) {
+      list.add(key);
+    });
+    list.sort((a, b) => map[b]!.compareTo(map[a]!));
+    return list.sublist(0, k);
+  }
+}
