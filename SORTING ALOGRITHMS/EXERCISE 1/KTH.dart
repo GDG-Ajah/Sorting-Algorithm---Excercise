@@ -27,5 +27,10 @@
 class Solution {
   int findKthLargest(List<int> nums, int k) {
 
+    // Sort the array
+    nums.sort();
+
+    // Return the kth largest element
+    return nums[nums.length - k];
   }
 }
