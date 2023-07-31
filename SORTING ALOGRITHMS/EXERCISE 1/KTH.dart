@@ -22,3 +22,10 @@
 
 // 1 <= k <= nums.length <= 105
 // -104 <= nums[i] <= 104
+
+
+class Solution {
+  int findKthLargest(List<int> nums, int k) {
+
+  }
+}
