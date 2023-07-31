@@ -30,7 +30,6 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
-        
-        
 
-
+        nums.sort()
+        return nums[-k]
