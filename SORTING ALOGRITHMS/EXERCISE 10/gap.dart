@@ -24,7 +24,6 @@
 // 0 <= nums[i] <= 10^9
 
 
-
 class Solution {
   int maximumGap(List<int> nums) {
     if (nums.length < 2) return 0;
